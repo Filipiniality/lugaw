@@ -1,0 +1,260 @@
+<title>EVIL LISTICLE</title>
+<head>
+<style>
+    :root {
+
+    /* applies to all areas */
+    --font-family: Verdana, sans-serif;
+    --font-size: 18px;
+    --line-height: 1.6;
+    --font-color: white;
+    --link-color: darkred;
+    --link-text-decoration: none;
+
+    /* main content (between sidebars) */
+    --content-padding: 30px;
+
+    /* header */
+    --header-height: 155px;
+    --header-background: url(burningBright.gif);
+    --header-margin-bottom: 5px;
+
+    /* footer 
+    --footer-height: 30px;*/
+    --footer-bg-color: #161616;
+
+    /* container */
+    --container-width: 868px;
+    --container-bg-color: #161616;
+
+    /* controls the gap between the content and the footer */
+    --row-gap: 0;
+
+    --background-color: #161616;
+    }
+    
+    /*   */
+
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        --background-color: #161616;
+        font-family: var(--font-family);
+        font-size: var(--font-size);
+        line-height: var(--line-height);
+        color: var(--font-color);
+    }
+    
+    .theme-eyestrain {
+    background-image: url('listicleBackground.jpg');
+    }
+    
+    .theme-no-eyestrain {
+    background: linear-gradient(#58111A, #161616);
+    }
+
+    button {
+    cursor:pointer;
+    border: none;
+    background-color: #a21232;
+    width: 160px;
+    margin-top: 8px;
+    padding: 10px 20px;
+    color: #FFF;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    }
+    
+    button:hover {
+    background-color: #c00;
+    }
+
+
+    a:hover { text-decoration: underline;}
+    
+    body a {
+        color: var(--link-color);
+        font-weight: bold;
+        text-decoration: var(--link-text-decoration);
+    }
+    
+    h1, h2 {
+        text-transform: uppercase;
+        text-align: center;
+        margin: auto;
+    }
+    
+    ul {
+        list-style-image: url('flameBullet.gif');
+        padding-left: 10;
+    }
+    
+    li:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+    #main-container {
+        max-width: var(--container-width);
+        margin: 0 auto;
+        background-color: var(--container-bg-color);
+    }
+
+    .flex {
+        display: flex;
+        margin-bottom: var(--row-gap);
+    }
+
+    .content-wrap {
+        margin-top: var(--content-margin-top);
+    }
+
+    #content-container {
+        width: 60%;
+        margin-bottom: var(--row-gap);
+        background-color: var(--content-bg-color);
+    }
+
+    #header-contained {
+        height: var(--header-height);
+        margin-bottom: var(--header-margin-bottom);
+        background-image: var(--header-background);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    #footer {
+        height: var(--footer-height);
+        text-align: center;
+        color: var(--font-color);
+        background-color: var(--footer-bg-color);
+    }
+
+    .wrapper {
+        padding-left: var(--content-padding);
+        padding-right: var(--content-padding);
+        padding-top: var(--sidebar-padding);
+    }
+    
+.thumbnail {
+    display: block;
+    max-width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    }
+
+    .footer-wrapper {
+/*        padding: 5px;*/
+    }
+
+@media only screen and (max-width: 868px) {
+        .flex {
+            flex-wrap: wrap;
+        }
+        
+        #content-container {
+            width: 100%;
+            display: block;
+            order: 1;
+            margin-bottom: 10px;
+        }
+
+html,body {
+font-size:14px;
+}
+.thumbnail {
+max-width: 100%;
+    }
+</style>
+    <script>
+        // function to set a given theme/color-scheme
+        function setTheme(themeName) {
+            localStorage.setItem('theme', themeName);
+            document.documentElement.className = themeName;
+        }
+
+        // function to toggle between eyestrain and eyesaver
+        function toggleTheme() {
+            if (localStorage.getItem('theme') === 'theme-eyestrain') {
+                setTheme('theme-no-eyestrain');
+            } else {
+                setTheme('theme-eyestrain');
+            }
+        }
+
+        // Immediately invoked function to set the theme on initial load
+        (function () {
+            if (localStorage.getItem('theme') === 'theme-dark') {
+                setTheme('theme-eyestrain');
+                document.getElementById('slider').checked = false;
+            } else {
+                setTheme('theme-no-eyestrain');
+              document.getElementById('slider').checked = true;
+            }
+        })();
+    </script>
+</head>
+<div id="header-full" style="display: none;"></div>
+
+<div id="main-container">
+    <div id="header-contained"></div>
+    <div class="content-wrap flex alignment">
+        <div id="content-container" style="flex-grow: 1;">
+            <div class="wrapper">
+            <p><button id="switch" onclick="toggleTheme()">Eyestrain Switch</button></p>
+<img class="thumbnail" src="evilRecs.JPG" alt="Monster and Kermit from the Muppets hugging. Monster is labeled &quot;The beloved piece of media I would never ever recommend to anyone under any circumstances&quot;. Kermit is labeled &quot;me&quot;.">
+<p>*<sub>This is tongue-in cheek. I cannot stress how subjective my taste is.</sub></p>    
+<p>Welcome to my <strong>EVIL LISTICLE!</strong> These are things that hurt my soul, but still felt like a worthwhile experience.</p>  
+<hr>
+<img class="thumbnail" src="takopi.jpg" alt="Takopi and Shizuka from the manga Takopi&#39;s Original Sin.">
+<h1>Takopi's Original Sin</h1>
+<ul>
+<li><strong>PLOT:</strong> Octopus alien arrives on earth and tries to cheer up an extremely neglected and bullied girl.</li>
+<li><strong>MOOD:</strong> Every chapter had my heart pounding (but NOT in a good way). The storyline feels hopeless, and the art induces a lot of dread despite being very simple. The plot twists feel really cheap, almost comical at times, but I was invested enough to read all 16 chapters.</li>
+<li><strong>VERDICT:</strong> I can't recommend this in good faith, because it feels a little... exploitative? I mean, it's tagged as &quot;gore&quot; on MangaDex and is about 10 year-olds. It does have a happy ending at least!!</li>
+</ul>
+<hr>
+<img class=thumbnail src="hikaru.jpg" alt="Yoshiki and Hikaru from the manga The Summer Hikaru Died">
+<h1>The Summer Hikaru Died</h1>
+<ul>
+<li><strong>PLOT:</strong> Guy's best friend (and unrequited crush) dies, but an evil spirit that looks and acts just like him comes back, so he tries to coexist with it.</li>
+<li><strong>MOOD:</strong> The drama and horror escalate very quickly, and the art style is very disorienting.</li>
+<li><strong>VERDICT:</strong> I've read other stuff by this mangaka, and they are very, <em>very</em> weird about women and m/m relationships, but it's (mostly) absent here. Mostly.</li>
+</ul>
+<hr>
+<img src="japansinks2020.jpg" style="max-width:100%;" alt="Screenshot of an anime review website. A user with a Kermit icon posts, 'Japan Sinks: 2020 is not good. Doesn't mean I didn't like it.'">
+<h1>Japan Sinks 2020</h1>
+<ul>
+<li><strong>PLOT:</strong> Filipino-Japanese family (and other immigrants) try to survive an apocalyptic-level earthquake while also enduring intense xenophobia.</li>
+<li><strong>MOOD:</strong> idk man I watched it with my family, and afterwards I realized, the show itself sucks, my enjoyment was coming from the people I was watching with.</li>
+<li><strong>VERDICT:</strong> Not a single Filipino worked on this show. I hated it so much but I watched the entire thing twice in one day b/c I'm desparate for pinoy rep. Don't watch this unless you're also desparate.</li>
+</ul>
+<hr>
+<h2>Tissue Ablatian and Variant Regeneration: A Case Report by Michael Blumlein</h2>
+<ul>
+<li><strong>PLOT:</strong> In a sci-fi horror setting where criminals can give back to humanity by being disected alive (WITHOUT ANESTHESIA) for use of their body parts, Ronald Reagan is chosen to attone.</li>
+<li><strong>MOOD:</strong> Very gross, very blunt, read it twice in a row #girl</li>
+<li><strong>VERDICT:</strong> 10/10. He's reduced to only his head, lungs, heart, and stomach by the end.</li>
+</ul>
+<hr>
+<img class="thumbnail" src="mushroomland.jpg" alt="Screenshot of Agatka from Kraina Grzyb&oacute;w TV">
+<h1>Kraina Grzyb&oacute;w TV</h1>
+<ul>
+<li><strong>PLOT:</strong> 20th century PSA-style YouTube channel where a young girl, Agatka, and her squirrel friend, Maggie, guide the viewer through simple tasks.</li>
+<li><strong>MOOD:</strong> Whenever I'm having a bad anxiety attack and need a distraction I watch this. It disturbs and confuses me and usually that is enough to calm me down. There have been moments in my life where I was bawling my eyes out, and then I pulled these videos up, and after a few minutes I'd stop crying.</li>
+<li><strong>VERDICT:</strong> Recommending this purely for the visuals, I do not particularly care for the plot. Be warned that in episode 2 there is a jumpscare where Maggie calls Agatka and the viewer the r-slur.</li>
+</ul>
+
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="footer-wrapper"><a href='../sitemap/'><img src="flameGuy.gif"><br>click to return to sitemap</a></div>
+    </div>
+</div>
