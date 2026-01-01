@@ -2,4 +2,8 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/crawlertext/public_html/
+<<<<<<< Updated upstream
     - /bin/cp -r /home/crawlertext/repositories/lugaw* $DEPLOYPATH
+=======
+    - /bin/cp -r /home/crawlertext/repositories/lugaw* $DEPLOYPATH
+>>>>>>> Stashed changes
